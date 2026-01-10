@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Furina g</title>
+  <link rel="icon" type="image/png" href="Fura.png">
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+<section id="start">
+    <div class="background"></div>
+
+    <div class="title">
+        <h1 class="title_1">Furina</h1>
+    </div>
+
+    <div class="splash_base">
+        <div class="hz">
+            <img src="splash_art.png" alt="Furina splash art" class="splash_art">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="precard" onclick="openConstellation()">
+            <img src="Fura.png" alt="furina_card" class="furina_card" >
+        </div>
+    </div>
+
+    <div class="info">
+        <div class="info_about_furina">
+            <a class="button" href="Furina.html">Info</a>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+</section>
+
+<!-- Constellation table -->
+<div id="constellationPopup" class="popup-overlay" onclick="closeConstellation()">
+    <div class="popup-content" onclick="event.stopPropagation()">
+        <button class="popup-close" onclick="closeConstellation()">×</button>
+
+        <h2 class="popup-title">Poisson d'Avril</h2>
+        <p class="popup-subtitle">Constellation Furina</p>
+
+        <div class="constellation-grid">
+            <!-- lvl 1 -->
+            <div class="constellation-item">
+                <span class="constellation-number">C1</span>
+                <div class="constellation-icon_1"></div>
+                <div class="constellation-info">
+                    <h3>"Love Is a Rebellious Bird That None Can Tame"</h3>
+                    <p>When Furina is in the Salon Member or Singer of Many Waters state, the HP of all party members is increased by 20%.</p>
+                </div>
+            </div>
+
+            <!-- lvl 2 -->
+            <div class="constellation-item">
+                <span class="constellation-number">C2</span>
+                <div class="constellation-icon_2"></div>
+                <div class="constellation-info">
+                    <h3>"A Woman Adapts Like Duckweed in Water"</h3>
+                    <p>In Salon Member state, 1 more Gentilhomme is created. In Singer of Many Waters state, healing is increased by 25%.</p>
+                </div>
+            </div>
+
+            <!-- lvl 3 -->
+            <div class="constellation-item">
+                <span class="constellation-number">C3</span>
+                <div class="constellation-icon_3"></div>
+                <div class="constellation-info">
+                    <h3>"My Secret Is Hidden Within Me, No One Will Know My Name"</h3>
+                    <p>Increases the level of the "Salon Solitaire" skill by 3. Maximum level is 15.</p>
+                </div>
+            </div>
+
+            <!-- lvl 4 -->
+            <div class="constellation-item">
+                <span class="constellation-number">C4</span>
+                <div class="constellation-icon_4"></div>
+                <div class="constellation-info">
+                    <h3>"They Know Not Life, Who Dwelt in the Netherworld Not!"</h3>
+                    <p>When team members gain or lose HP, Furina gains 4 Energy charges. Triggers once every 5 seconds.</p>
+                </div>
+            </div>
+
+            <!-- lvl 5 -->
+            <div class="constellation-item">
+                <span class="constellation-number">C5</span>
+                <div class="constellation-icon_5"></div>
+                <div class="constellation-info">
+                    <h3>"His Name I Now Know, It Is...!"</h3>
+                    <p>Increases Elemental Burst level by 3. Maximum level is 15.</p>
+                </div>
+            </div>
+
+            <!-- lvl 6 -->
+            <div class="constellation-item">
+                <span class="constellation-number">C6</span>
+                <div class="constellation-icon_6"></div>
+                <div class="constellation-info">
+                    <h3>"Hear Me — Let Us Raise the Chalice of Love!"</h3>
+                    <p>When Furina uses an Elemental Skill, she gains "Center of Attention" for 10 seconds. During the effect, DMG and healing of characters increases by 14%, can be stacked up to 3 times.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="back-button">
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="arrow">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+        <span class="text">Back to top</span>
+    </button>
+</div>
+
+<div class="container">
+    <div class="header">
+        <h1> Furina de Fontaine </h1>
+        <p>Hydro Archon • The Star of Fontaine</p>
+    </div>
+
+    <!-- Talent -->
+    <div class="talents-section">
+        <h2 class="section-title">Talent</h2>
+
+        <div class="talents-icons">
+            <div class="talent-icon active" data-talent="0">
+                <img src="base_atak.webp" alt="Salon Solitaire">
+            </div>
+            <div class="talent-icon" data-talent="1">
+                <img src="E.webp" alt="Salon Solitaire Ousia">
+            </div>
+            <div class="talent-icon" data-talent="2">
+                <img src="Q.webp" alt="Let the People Rejoice">
+            </div>
+            <div class="talent-icon" data-talent="3">
+                <img src="1_psv.webp" alt="Endless Waltz">
+            </div>
+            <div class="talent-icon" data-talent="4">
+                <img src="2_pasive_t.png" alt="Unheard Confession">
+            </div>
+            <div class="talent-icon" data-talent="5">
+                <img src="3_pasive.webp" alt="The Sea Is My Stage">
+            </div>
+        </div>
+
+        <div class="talent-content">
+            <div class="talent-media">
+                <video autoplay loop muted playsinline>
+                    <source src="base.atak.mp4" type="video/mp4">
+                    <img src="Fura.png" alt="Furina Talent">
+                </video>
+            </div>
+
+            <div class="talent-description">
+                <h3 id="talentName">Normal attack</h3>
+                <span class="talent-type" id="talentType">Normal attack</span>
+                <div id="talentDesc">
+                    <p><strong>Normal Attack:</strong> Performs up to four consecutive attacks.</p>
+                    <p><strong>Charged Attack:</strong> Consumes a certain amount of stamina and begins a solo dance that deals physical damage to nearby enemies and changes the arche's appearance. If there are salon participants or the Stream Singer summoned by her elemental skill, Lonely Hearts Salon, on the battlefield, they will change to a different type of guest.</p>
+                    <p><strong>Arche: Sacred and Mundane Sites:</strong> After a certain interval, when Furina's normal attack hits an enemy, a Soulbreath Needle or Stormwater Blade appears in its place, depending on Furina's Arche type, dealing Hydro damage to the Pneuma or Usii, respectively. When Furina enters the battlefield, she has an Usii Arche.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery-section">
+        <h2 class="section-title">Gallery</h2>
+
+        <div class="gallery-nav">
+            <button class="gallery-btn active" data-gallery="0">Splash art</button>
+            <button class="gallery-btn" data-gallery="1">Animation 1</button>
+            <button class="gallery-btn" data-gallery="2">Animation 2</button>
+            <button class="gallery-btn" data-gallery="3">Name card</button>
+        </div>
+
+        <div class="gallery-content-wrapper">
+            <div class="gallery-content">
+                <div class="gallery-media">
+                    <img src="splash_art.png" alt="Furina Splash Art">
+                </div>
+            </div>
+
+            <!-- Photo slider-->
+            <div class="slider-container">
+                <div class="slider-title">Official arts</div>
+                <div class="slider-subtitle">Pneuma</div>
+
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <div class="slide active">
+                        <img src="pneuma.jfif" alt="Арт 1">
+                    </div>
+                    <div class="slide">
+                        <img src="ousia.jfif" alt="Арт 2">
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <div class="dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                    </div>
+                    <div class="nav-buttons">
+                        <button id="prevBtn">◀</button>
+                        <button id="nextBtn">▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<script>
+//   Поява/зникнення
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    } else {
+      entry.target.classList.remove("visible");
+    }
+  });
+}, { threshold: 0.3 });
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+
+// Hide card
+
+const precard = document.querySelector('.precard');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > window.innerHeight * 0.8) {
+        precard.classList.add('hidden');
+    } else {
+        precard.classList.remove('hidden');
+    }
+});
+
+// const table
+
+function openConstellation() {
+    document.getElementById('constellationPopup').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeConstellation() {
+    document.getElementById('constellationPopup').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeConstellation();
+    }
+});
+
+// Talent
+
+const talentsData = [
+    {
+        name: "Normal attack",
+        type: "Normal attack",
+        description: `
+            <p style="color: #a2cbfa;"><strong style="color: #185acc;">Normal Attack:</strong> Performs up to four consecutive hits.</p>
+            <p style="color: #a2cbfa;"><strong style="color: #185acc;">Charged Attack:</strong> Spends a certain amount of stamina and begins a solo dance that deals physical damage to nearby enemies and changes her archetype. If there are salon participants or the Stream Singer summoned by her elemental skill, Lonely Hearts Salon, on the battlefield, they will change to a different type of guest.</p>
+            <p style="color: #a2cbfa;"><strong style="color: #185acc;">Arche: Sacred and Secular Places:</strong> After a certain interval, when Furina's normal attack hits an enemy, a Soulbreath Needle or Stormwater Blade appears in its place, depending on Furina's Arche type, dealing Hydro damage to either Pneuma or Usii, respectively. When Furina enters the battlefield, she has an Usii Arche.</p>
+        `,
+        video: "base.atak.mp4"
+    },
+    {
+        name: "Salon Solitaire",
+        type: "Elemental skill",
+        description: `
+            <p style="color: #a2cbfa;"><strong style="color: #185acc;">Pneuma</strong></p>
+            <p style="color: #a2cbfa;">Summons a Stream Singer who heals nearby active characters proportional to their max HP at regular intervals.</p>
+            <p style="color: #a2cbfa; margin-top: 15px;"><strong style="color: #185acc;">Ousia</strong></p>
+            <p style="color: #a2cbfa;">The swirling bubbles in the dance deal Hydro damage over an area proportional to Furina's max HP and summon three salon guests: <strong style="color: #185acc;">Monsieur Houchet</strong> as a spherical octopus, <strong style="color: #185acc;">Manager Chevalmarine</strong> as a bubble horse, and <strong style="color: #185acc;">Mademoiselle Crabaletta</strong> as an armored crab. They attack nearby enemies at set intervals with priority on the active character's target, dealing Hydro damage proportional to the character's max HP. If there are nearby characters with HP above 50%, Salon members use these characters' HP when attacking to increase their attack power based on the number of characters "borrowing" HP. If the number of donor characters is <strong style="color: #002ca3;">1/2/3/4</strong> (or more), the damage dealt by Salon members is <strong style="color: #185acc;">110%/120%/130%/140%</strong> of their initial damage.</p>
+        `,
+        video: "E_talent.mp4"
+    },
+    {
+        name: "Let the People Rejoice",
+        type: "Elemental explosion",
+        description: `
+            <p style="color: #a2cbfa;">A jovial impulse is awakened, creating a foamy scene and dealing Hydro damage in an area proportional to Furina's Max HP and placing nearby party members into the <strong style="color: #185acc;">Worldwide Jovial</strong> state: while the state is active, whenever nearby characters' current HP increases or decreases, Furina gains <strong style="color: #185acc;">1 Fanfare</strong> for every 1% change in the character's HP as a percentage of their Max HP.</p>
+            <p style="color: #a2cbfa; margin-top: 10px;">At the same time, the damage dealt and healing received by all nearby party members is increased based on the number of Fanfares.</p>
+            <p style="color: #a2cbfa; margin-top: 10px;">When the duration expires, Furina's Fanfare resets.</p>
+        `,
+        video: "Q_talent.mp4"
+    },
+    {
+        name: "Endless Waltz",
+        type: "Passive Talent 1",
+        description: `
+            <p style="color: #a2cbfa;">Whenever an active character in a party receives excessive healing and the source of the healing is not Furina herself, Furina restores HP to a nearby party member every <strong style="color: #185acc;">2 seconds</strong> equal to <strong style="color: #185acc;">2%</strong> of their Max HP for <strong style="color: #185acc;">4 seconds</strong>.</p>
+        `
+    },
+    {
+        name: "Unheard Confession",
+        type: "Passive Talent 2",
+        description: `
+            <p style="color: #a2cbfa;">Every <strong style="color: #185acc;">1000 points</strong> of max HP buffs the Furina's Lonely Hearts Salon of the opposite arche as follows:</p>
+            <p style="color: #a2cbfa; margin-left: 20px; margin-top: 10px;">• Damage dealt by salon participants increases by <strong style="color: #185acc;">0.7%</strong>, up to a maximum of <strong style="color: #185acc;">28%</strong>.</p>
+            <p style="color: #a2cbfa; margin-left: 20px; margin-top: 8px;">• The interval at which the Stream Singer heals the active character nearby is reduced by <strong style="color: #185acc;">0.4%</strong>. This can reduce the interval by a maximum of <strong style="color: #002ca3;">16%</strong>.</p>
+        `
+    },
+    {
+        name: "The Sea Is My Stage",
+        type: "Utility Passive",
+        description: `
+            <p style="color: #a2cbfa;">The cooldown of Fontmere's Xenochrome Aliens abilities is reduced by <strong style="color: #185acc;">30%</strong>.</p>
+        `
+    }
+];
+
+// Gallery
+
+const galleryData = [
+    {
+        title: "Furina Splash Art",
+        type: "image",
+        media: "splash_art.png"
+    },
+    {
+        title: "Animation 1",
+        type: "video",
+        media: "Animation2.mp4"
+    },
+    {
+        title: "Animation 2",
+        type: "video",
+        media: "Animation1.mp4"
+    },
+    {
+        title: "Name Card",
+        type: "image",
+        media: "card_name.jfif"
+    }
+];
+
+// talent logic
+
+const talentIcons = document.querySelectorAll('.talent-icon');
+const talentName = document.getElementById('talentName');
+const talentType = document.getElementById('talentType');
+const talentDesc = document.getElementById('talentDesc');
+const talentMediaContainer = document.querySelector('.talent-media');
+
+talentIcons.forEach((icon, index) => {
+    icon.addEventListener('click', () => {
+        talentIcons.forEach(i => i.classList.remove('active'));
+        icon.classList.add('active');
+
+        const data = talentsData[index];
+        talentName.textContent = data.name;
+        talentType.textContent = data.type;
+        talentDesc.innerHTML = `<p>${data.description}</p>`;
+
+// have/not video
+        if (data.video) {
+            talentMediaContainer.innerHTML = `
+                <video autoplay loop muted playsinline>
+                    <source src="${data.video}" type="video/mp4">
+                </video>
+            `;
+        } else {
+// just icon for psv talent
+            talentMediaContainer.innerHTML = `
+                <div class="passive-talent-display">
+                    <div class="passive-talent-icon">
+                        <img src="${icon.querySelector('img').src}" alt="${data.name}">
+                    </div>
+                </div>
+            `;
+        }
+    });
+});
+
+// gallery logic
+
+const galleryButtons = document.querySelectorAll('.gallery-btn');
+const galleryMediaContainer = document.querySelector('.gallery-media');
+
+galleryButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+// delete active class
+        galleryButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+// keep index HTML atributs
+        const index = parseInt(btn.getAttribute('data-gallery'));
+        const data = galleryData[index];
+
+
+        if (data.type === "video") {
+            galleryMediaContainer.innerHTML = `
+                <video autoplay loop muted playsinline>
+                    <source src="${data.media}" type="video/mp4">
+                </video>
+            `;
+        } else {
+            galleryMediaContainer.innerHTML = `
+                <img src="${data.media}" alt="${data.title}">
+            `;
+        }
+    });
+});
+
+// pneuma/ousia card
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const subtitle = document.querySelector('.slider-subtitle');
+const sliderWrapper = document.getElementById('sliderWrapper');
+const totalSlides = slides.length;
+let autoSlideInterval;
+
+// Text at slides
+const subtitles = ['Pneuma', 'Ousia'];
+
+// automat height
+function adjustSliderHeight() {
+    const activeSlide = document.querySelector('.slide.active img');
+    if (activeSlide && activeSlide.complete) {
+        const aspectRatio = activeSlide.naturalHeight / activeSlide.naturalWidth;
+        const newHeight = sliderWrapper.offsetWidth * aspectRatio;
+        sliderWrapper.style.height = `${newHeight}px`;
+    }
+}
+
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    currentSlide = (n + totalSlides) % totalSlides;
+
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+
+
+    subtitle.style.opacity = '0';
+    setTimeout(() => {
+        subtitle.textContent = subtitles[currentSlide];
+        subtitle.style.opacity = '1';
+    }, 250);
+
+// Height adjustment
+    setTimeout(adjustSliderHeight, 50);
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(nextSlide, 4000);
+}
+
+function stopAutoSlide() {
+    clearInterval(autoSlideInterval);
+}
+
+// Navigate button
+document.getElementById('nextBtn').addEventListener('click', () => {
+    nextSlide();
+    stopAutoSlide();
+    startAutoSlide();
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+    prevSlide();
+    stopAutoSlide();
+    startAutoSlide();
+});
+
+// navigate dot
+dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+        const slideIndex = parseInt(e.target.getAttribute('data-slide'));
+        showSlide(slideIndex);
+        stopAutoSlide();
+        startAutoSlide();
+    });
+});
+
+
+window.addEventListener('load', () => {
+    adjustSliderHeight();
+    startAutoSlide();
+});
+
+
+sliderWrapper.addEventListener('mouseenter', stopAutoSlide);
+sliderWrapper.addEventListener('mouseleave', startAutoSlide);
+
+
+window.addEventListener('resize', adjustSliderHeight);
+
+
+slides.forEach(slide => {
+    const img = slide.querySelector('img');
+    if (img) {
+        img.addEventListener('load', adjustSliderHeight);
+    }
+});
+</script>
+
+</body>
+</html>
