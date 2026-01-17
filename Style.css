@@ -982,3 +982,250 @@ button:active {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+
+
+
+
+    @media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    .talents-icons {
+        gap: 15px;
+    }
+
+    .talent-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    /* First page mobile - розташування як на фото */
+    #start {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 10vh;
+    }
+
+    .title {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .title_1 {
+        font-size: clamp(4rem, 15vw, 7rem);
+        text-align: center;
+    }
+
+    .splash_base {
+        position: relative;
+        width: 100%;
+        height: auto;
+        max-height: 50vh;
+        top: auto;
+        right: auto;
+        margin: 20px 0;
+    }
+
+    .hz {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .splash_art {
+        position: relative;
+        right: auto;
+        transform: none;
+        height: auto;
+        max-height: 45vh;
+        width: 90%;
+        object-fit: contain;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .precard {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 180px;
+        margin: 0 auto;
+    }
+
+    .info {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .button {
+        font-size: 2.5rem;
+        padding: 20px 50px;
+        display: inline-block;
+    }
+
+    /* Constellation popup mobile - виправлення позиціонування */
+    .popup-content {
+        padding: 20px;
+        max-width: 95%;
+        max-height: 90vh;
+        margin: 10px;
+    }
+
+    .popup-title {
+        font-size: 2rem;
+    }
+
+    .popup-subtitle {
+        font-size: 1rem;
+    }
+
+    .constellation-item {
+        flex-direction: row;
+        gap: 15px;
+        padding: 15px;
+        align-items: flex-start;
+        text-align: left;
+        position: relative;
+    }
+
+    .constellation-number {
+        position: relative;
+        min-width: 40px;
+        font-size: 1.5rem;
+        flex-shrink: 0;
+    }
+
+    .constellation-icon_1,
+    .constellation-icon_2,
+    .constellation-icon_3,
+    .constellation-icon_4,
+    .constellation-icon_5,
+    .constellation-icon_6 {
+        min-width: 70px;
+        height: 70px;
+        flex-shrink: 0;
+    }
+
+    .constellation-info {
+        flex: 1;
+    }
+
+    .constellation-info h3 {
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .constellation-info p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .popup-close {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+
+    .back-button {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .back-to-top {
+        width: 60px;
+        height: 60px;
+    }
+
+    .back-to-top .text {
+        display: none;
+    }
+
+    .back-to-top .arrow {
+        width: 30px;
+        height: 30px;
+    }
+
+    .back-to-top:hover .arrow {
+        width: 30px;
+        height: 30px;
+        transform: translateY(-3px);
+    }
+}
+
+@media (max-width: 480px) {
+    .title_1 {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .button {
+        font-size: 2rem;
+        padding: 15px 40px;
+    }
+
+    .precard {
+        width: 150px;
+    }
+
+    .splash_art {
+        max-height: 40vh;
+        width: 95%;
+    }
+
+    .popup-content {
+        padding: 15px;
+    }
+
+    .popup-title {
+        font-size: 1.5rem;
+    }
+
+    .constellation-number {
+        min-width: 35px;
+        font-size: 1.2rem;
+    }
+
+    .constellation-icon_1,
+    .constellation-icon_2,
+    .constellation-icon_3,
+    .constellation-icon_4,
+    .constellation-icon_5,
+    .constellation-icon_6 {
+        min-width: 60px;
+        height: 60px;
+    }
+
+    .constellation-info h3 {
+        font-size: 0.85rem;
+    }
+
+    .constellation-info p {
+        font-size: 0.8rem;
+    }
+}
