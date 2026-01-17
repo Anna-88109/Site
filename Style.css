@@ -987,7 +987,7 @@ button:active {
 
 
 
-    @media (max-width: 768px) {
+@media (max-width: 768px) {
     .container {
         padding: 25px;
     }
@@ -1009,76 +1009,66 @@ button:active {
         font-size: 24px;
     }
 
-    /* First page mobile - правильне розташування */
+    /* First page mobile - правильна структура */
     #start {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: stretch;
+        display: block;
+        position: relative;
+        min-height: 100vh;
+        padding: 0;
     }
 
-    /* Splash art на всю ширину екрану */
+    /* 1. Splash art зверху на всю ширину */
     .splash_base {
         position: relative;
         width: 100vw;
-        height: 50vh;
+        height: 60vh;
         top: 0;
-        right: 0;
         left: 50%;
+        right: auto;
         transform: translateX(-50%);
         margin: 0;
     }
 
     .hz {
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .splash_art {
         position: relative;
-        right: 0;
+        right: auto;
+        bottom: auto;
         transform: none;
-        height: 100%;
         width: 100%;
+        height: 100%;
         object-fit: cover;
     }
 
-    /* Градієнтний перехід після splash art */
-    .splash_base::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: linear-gradient(to bottom, transparent, rgba(27, 110, 164, 0.8));
-        pointer-events: none;
-    }
-
-    /* Контейнер для назви та картки */
+    /* 2. Напис "Furina" зліва + іконка справа (на одній лінії) */
     .title {
         position: relative;
         top: auto;
-        left: 0;
+        left: auto;
         transform: none;
-        width: 50%;
-        text-align: left;
-        padding-left: 5%;
-        margin-top: 30px;
+        width: auto;
+        display: inline-block;
+        margin: 30px 0 0 5%;
         z-index: 50;
     }
 
     .title_1 {
         font-size: clamp(3rem, 10vw, 5rem);
         text-align: left;
+        margin: 0;
     }
 
-    /* Картка справа */
     .card {
         position: absolute;
-        top: calc(50vh + 30px);
+        top: calc(60vh + 30px);
         right: 5%;
+        left: auto;
         width: auto;
         height: auto;
         pointer-events: auto;
@@ -1089,11 +1079,16 @@ button:active {
         top: auto;
         left: auto;
         transform: none;
-        width: 140px;
+        width: 150px;
         margin: 0;
     }
 
-    /* Кнопка внизу */
+    .precard.hidden {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* 3. Кнопка Info внизу */
     .info {
         position: relative;
         bottom: auto;
@@ -1101,17 +1096,18 @@ button:active {
         transform: none;
         width: 100%;
         text-align: center;
-        margin-top: 180px;
+        margin-top: 40px;
         padding-bottom: 40px;
+        z-index: 60;
     }
 
     .button {
         font-size: 2rem;
-        padding: 15px 40px;
+        padding: 15px 50px;
         display: inline-block;
     }
 
-    /* Constellation popup mobile - виправлення позиціонування */
+    /* Constellation popup mobile */
     .popup-content {
         padding: 20px;
         max-width: 95%;
@@ -1202,12 +1198,11 @@ button:active {
 
 @media (max-width: 480px) {
     .splash_base {
-        height: 45vh;
+        height: 55vh;
     }
 
     .title {
-        padding-left: 3%;
-        margin-top: 20px;
+        margin: 25px 0 0 3%;
     }
 
     .title_1 {
@@ -1215,22 +1210,22 @@ button:active {
     }
 
     .card {
-        top: calc(45vh + 20px);
+        top: calc(55vh + 25px);
         right: 3%;
     }
 
     .precard {
-        width: 120px;
+        width: 130px;
     }
 
     .info {
-        margin-top: 150px;
+        margin-top: 30px;
         padding-bottom: 30px;
     }
 
     .button {
         font-size: 1.8rem;
-        padding: 12px 35px;
+        padding: 12px 40px;
     }
 
     .popup-content {
