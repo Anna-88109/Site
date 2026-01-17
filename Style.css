@@ -1011,7 +1011,8 @@ button:active {
 
     /* First page mobile - правильна структура */
     #start {
-        display: block;
+        display: flex;
+        flex-direction: column;
         position: relative;
         min-height: 100vh;
         padding: 0;
@@ -1027,6 +1028,7 @@ button:active {
         right: auto;
         transform: translateX(-50%);
         margin: 0;
+        order: 1;
     }
 
     .hz {
@@ -1046,7 +1048,7 @@ button:active {
         object-fit: cover;
     }
 
-    /* 2. Напис "Furina" зліва + іконка справа (на одній лінії) */
+    /* 2. Напис "Furina" зліва + іконка справа (на одній лінії) - ПІСЛЯ splash art */
     .title {
         position: relative;
         top: auto;
@@ -1056,6 +1058,7 @@ button:active {
         display: inline-block;
         margin: 30px 0 0 5%;
         z-index: 50;
+        order: 2;
     }
 
     .title_1 {
@@ -1065,13 +1068,18 @@ button:active {
     }
 
     .card {
-        position: absolute;
-        top: calc(60vh + 30px);
+        position: relative;
+        top: auto;
         right: 5%;
         left: auto;
         width: auto;
         height: auto;
         pointer-events: auto;
+        order: 2;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -180px;
+        padding-right: 5%;
     }
 
     .precard {
@@ -1099,6 +1107,7 @@ button:active {
         margin-top: 40px;
         padding-bottom: 40px;
         z-index: 60;
+        order: 3;
     }
 
     .button {
